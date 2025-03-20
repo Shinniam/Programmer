@@ -8,9 +8,16 @@ app.use(express.json());
 // チャット応答のエンドポイント
 app.post('/chat', (req, res) => {
     const userMessage = req.body.message;
-    // ここでAIロジックを追加（仮に簡単な応答）
+    if (!userMessage) {
+        return res.status(400).json({ error: 'Message is required' });
+    }
     const aiResponse = `あなたが言ったこと: "${userMessage}"。どう思う？`;
     res.json({ reply: aiResponse });
+});
+
+// ルートで動作確認
+app.get('/', (req, res) => {
+    res.send('Server is running!');
 });
 
 app.listen(port, () => {
