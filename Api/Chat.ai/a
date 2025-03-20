@@ -1,0 +1,9 @@
+chat-ai/
+├── api/
+│   └── chat.js
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── package.json
+└── (vercel.json)  # 今回は削除
