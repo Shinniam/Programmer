@@ -1,3 +1,0 @@
-mkdir chat-ai
-cd chat-ai
-npm init -y
